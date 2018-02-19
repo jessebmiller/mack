@@ -8,8 +8,9 @@ echo "Install starting. You may be asked for your password (for sudo)."
 xcode-select -p || exit "XCode must be installed! (use the app store)"
 
 # requirements
-cd ~
 mkdir ~/tmp
+cd ~/tmp
+git clone git@github.com:jessebmiller/mack.git
 
 # homebrew
 if hash brew &> /dev/null; then
@@ -65,7 +66,9 @@ cp -r /Volumes/Keybase/Keybase.app /Applications
 sudo hdiutil detach /Volumes/Keybase
 
 # Install dotfiles
+cp ~/tmp/mack/dotfiles/* ~/
 
 # configure iterm2
+open "~/tmp/mack/config/SolarizedDark.itermcolors"
 
 rm -rf ~/tmp
