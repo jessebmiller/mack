@@ -73,6 +73,7 @@ for file in ~/mack/dotfiles/.*; do
     destinationFile="~/$(basename $file)"
     ln -s $file $destinationFile
 done
+unset GLOBIGNORE
 
 # configure iterm2
 open "~/tmp/mack/config/SolarizedDark.itermcolors"
