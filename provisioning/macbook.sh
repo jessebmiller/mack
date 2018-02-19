@@ -76,6 +76,6 @@ done
 unset GLOBIGNORE
 
 # configure iterm2
-open "~/tmp/mack/config/SolarizedDark.itermcolors"
+open "~/mack/config/SolarizedDark.itermcolors"
 
 rm -rf ~/tmp
