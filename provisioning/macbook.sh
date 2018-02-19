@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set +e
+
 # - homebrew, fonts, chrome, docker, iterm2
 
 echo "Install starting. You may be asked for your password (for sudo)."
@@ -66,10 +68,10 @@ cp -r /Volumes/Keybase/Keybase.app /Applications
 sudo hdiutil detach /Volumes/Keybase
 
 # Install dotfiles
-for file in ~/mack/dotfiles/*; do
-    sourceFile="~/mack/dotfiles/$file"
-    destinationFile="~/$file"
-    ln -s $sourceFile $destinationFile
+export GLOBIGNORE="*." # exclude . and .. from glob
+for file in ~/mack/dotfiles/.*; do
+    destinationFile="~/$(basename $file)"
+    ln -s $file $destinationFile
 done
 
 # configure iterm2
