@@ -8,9 +8,9 @@ echo "Install starting. You may be asked for your password (for sudo)."
 xcode-select -p || exit "XCode must be installed! (use the app store)"
 
 # requirements
-mkdir ~/tmp
-cd ~/tmp
+cd ~/
 git clone git@github.com:jessebmiller/mack.git
+mkdir ~/tmp
 
 # homebrew
 if hash brew &> /dev/null; then
@@ -58,7 +58,8 @@ echo "Installing applications..."
 brew cask install \
      google-chrome \
      iterm2 \
-     docker
+     docker \
+     tidal
 
 curl https://prerelease.keybase.io/Keybase.dmg > ~/tmp/Keybase.dmg
 sudo hdiutil attach ~/tmp/Keybase.dmg
@@ -66,7 +67,11 @@ cp -r /Volumes/Keybase/Keybase.app /Applications
 sudo hdiutil detach /Volumes/Keybase
 
 # Install dotfiles
-cp ~/tmp/mack/dotfiles/* ~/
+for file in ~/mack/dotfiles/*; do
+    sourceFile="~/mack/dotfiles/$file"
+    destinationFile="~/$file"
+    ln -s $sourceFile $destinationFile
+done
 
 # configure iterm2
 open "~/tmp/mack/config/SolarizedDark.itermcolors"
