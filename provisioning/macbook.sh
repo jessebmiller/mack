@@ -71,7 +71,7 @@ sudo hdiutil detach /Volumes/Keybase
 export GLOBIGNORE="*." # exclude . and .. from glob
 for file in ~/mack/dotfiles/.*; do
     destinationFile="~/$(basename $file)"
-    ln -s $file $destinationFile
+    ln -s $destinationFile $file
 done
 unset GLOBIGNORE
 
