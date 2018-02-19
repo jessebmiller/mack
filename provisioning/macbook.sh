@@ -9,7 +9,6 @@ xcode-select -p || exit "XCode must be installed! (use the app store)"
 
 # requirements
 cd ~/
-git clone git@github.com:jessebmiller/mack.git
 mkdir ~/tmp
 
 # homebrew
