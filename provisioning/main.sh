@@ -1,8 +1,6 @@
 #!/bin/bash
 
-platform=$(uname)
-
-case $platform in
+case $(uname) in
     "Darwin")
         echo "Provisioning $platform"
         /bin/bash ./macbook.sh
