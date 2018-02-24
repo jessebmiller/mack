@@ -1,0 +1,1 @@
+emacs=$(cat $MACKPATH/commands/emacs.sh)
