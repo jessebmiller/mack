@@ -10,8 +10,6 @@
                     (not (gnutls-available-p))))
        (url (concat (if no-ssl "http" "https") "://melpa.org/packages/")))
     (add-to-list 'package-archives (cons "melpa" url) t))
-(add-to-list 'package-archives
-             '("marmalade" . "https://marmalade-repo.org/packages/"))
 
 ;; get some ido goodness
 (ido-mode 1)
@@ -46,7 +44,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (haskell-mode yaml-mode ssh-file-modes smex paredit markdown-mode magit ido-ubiquitous go-mode better-defaults))))
+    (deft toml-mode haskell-mode yaml-mode ssh-file-modes smex paredit markdown-mode magit ido-ubiquitous go-mode better-defaults))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
