@@ -2,3 +2,5 @@
 [user]
 	name = Jesse B. Miller
 	email = jesse@jessebmiller.com
+[core]
+	excludesfile = ~/.user_gitignore
