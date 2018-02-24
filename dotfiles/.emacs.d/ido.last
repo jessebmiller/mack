@@ -2,6 +2,8 @@
 
 ;; ----- ido-last-directory-list -----
 (
+ ("/host_root/Users/jessemiller/mack/dotfiles/" . ".emacs.d/")
+ ("/host_root/Users/" . "jessemiller/")
  ("/root/" . ".emacs.d/")
  ("/tmp/" . "hsperfdata_root/")
  ("/" . "root/")
@@ -9,18 +11,25 @@
 
 ;; ----- ido-work-directory-list -----
 (
+ "/host_root/Users/jessemiller/mack/dotfiles/.emacs.d/"
  "/tmp/hsperfdata_root/"
  "/work/"
 )
 
 ;; ----- ido-work-file-list -----
 (
+ "smex-items"
+ "init.el"
  "323"
  "Dockerfile"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
+ ("/tmp/hsperfdata_root/" (23178 56568 0 0) "435" "./" "../")
+
+ ("/host_root/Users/jessemiller/mack/dotfiles/.emacs.d/" (23185 49049 0 0) "backups/" "elpa/" "init.el" "auto-save-list/" "var/" "places" "smex-items" "ido.last" "../" "./")
+
  ("/root/.emacs.d/" (23185 46584 0 0) "backups/" "elpa/" "init.el" "auto-save-list/" "places" "smex-items" "ido.last" "../" "./")
 
  ("/root/" (23178 56754 0 0) ".wget-hsts" ".gnupg/" ".lein/" ".emacs.d/" ".tcshrc" ".bash_profile" "original-ks.cfg" "anaconda-post.log" "./" "../" ".bash_logout" ".bashrc" "anaconda-ks.cfg" ".cshrc")
@@ -34,10 +43,6 @@
  ("/host_root/Users/jessemiller/mack/" (23182 19160 0 0) ".git/" "commands/" "README.md" "provisioning/" "config/" "dotfiles/" "../" "./")
 
  ("/host_root/Users/jessemiller/mack/dotfiles/" (23185 45540 0 0) ".gitconfig" ".functions" ".zsh_prompt" ".zshenv" ".gitignore" ".emacs.d/" "install.sh" ".zshrc" ".docker/" "../" "./")
-
- ("/host_root/Users/jessemiller/mack/dotfiles/.emacs.d/" (23185 46584 0 0) "backups/" "elpa/" "init.el" "auto-save-list/" "places" "smex-items" "ido.last" "../" "./")
-
- ("/tmp/hsperfdata_root/" (22956 22828 0 0) "323" "../" "./")
 
  ("/tmp/" (22956 22929 0 0) "hsperfdata_root/" ".Test-unix/" ".ICE-unix/" "ks-script-eup7u7fn" "../" "./" ".X11-unix/" ".XIM-unix/" ".font-unix/")
 
