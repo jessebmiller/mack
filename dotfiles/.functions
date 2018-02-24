@@ -1,0 +1,8 @@
+dotfiles() {
+  $(which zsh) $MACKPATH/dotfiles/install.sh
+  $(which zsh)
+}
+
+help() {
+  echo "dotfiles: install dotfiles"
+}
