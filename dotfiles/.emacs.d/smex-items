@@ -1,19 +1,19 @@
 
 ;; ----- smex-history -----
 (
+ magit-status
+ deft
+ package-list-packages
  package-refresh-contents
  package-autoremove
- package-list-packages
  eval-buffer
  paredit-mode
- clojure-mode
- whitespace-cleanup
 )
 
 ;; ----- smex-data -----
 (
  (where-is . 1)
- (package-list-packages . 8)
+ (package-list-packages . 9)
  (color-theme-solarized . 1)
  (color-theme-solarized-dark . 1)
  (load-theme . 1)
@@ -27,5 +27,8 @@
  (clojure-mode . 1)
  (paredit-mode . 1)
  (package-autoremove . 1)
- (package-refresh-contents . 3)
+ (package-refresh-contents . 4)
+ (deft . 1)
+ (deft-setup . 1)
+ (magit-status . 13)
 )
