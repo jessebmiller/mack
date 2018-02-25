@@ -2,15 +2,25 @@
 
 ;; ----- ido-last-directory-list -----
 (
+ ("/host_root/Users/jessemiller/projects/emacs/" . "emacs.d/")
+ ("/host_root/Users/jessemiller/" . "mack/")
+ ("/host_root/" . "Users/")
+ ("/host_root/Users/jessemiller/mack/" . "provisioning/")
  ("/host_root/Users/jessemiller/mack/dotfiles/" . ".emacs.d/")
  ("/host_root/Users/" . "jessemiller/")
  ("/root/" . ".emacs.d/")
  ("/tmp/" . "hsperfdata_root/")
- ("/" . "root/")
+ ("/" . "host_root/")
 )
 
 ;; ----- ido-work-directory-list -----
 (
+ "/host_root/Users/jessemiller/mack/provisioning/"
+ "/host_root/Users/jessemiller/mack/dotfiles/"
+ "/host_root/Users/jessemiller/projects/emacs/"
+ "/host_root/Users/jessemiller/projects/emacs/emacs.d/"
+ "/host_root/Users/jessemiller/mack/commands/"
+ "/host_root/Users/jessemiller/org/"
  "/host_root/Users/jessemiller/mack/dotfiles/.emacs.d/"
  "/tmp/hsperfdata_root/"
  "/work/"
@@ -18,31 +28,53 @@
 
 ;; ----- ido-work-file-list -----
 (
- "smex-items"
+ "macbook.sh"
+ ".zshrc"
+ ".zshenv"
+ ".gitignore"
  "init.el"
- "323"
- "Dockerfile"
+ "emacs.sh"
+ "notes.org"
+ "chrome.sh"
+ "git.sh"
+ "gpg.sh"
 )
 
 ;; ----- ido-dir-file-cache -----
 (
+ ("/host_root/Users/jessemiller/mack/provisioning/" (23182 22957 0 0) "macbook.sh" "main.sh" "../" "./")
+
+ ("/host_root/Users/jessemiller/mack/dotfiles/" (23185 60796 0 0) ".gitconfig" ".functions" ".zsh_prompt" ".zshenv" ".gitignore" ".emacs.d/" "install.sh" ".zshrc" ".docker/" "../" "./")
+
+ ("/host_root/Users/jessemiller/" (23185 61758 0 0) ".viminfo" ".bash_history" ".gitconfig" "Downloads/" ".functions" "Documents/" ".Trash/" "Applications/" "Movies/" ".ssh/" ".zsh_prompt" ".zshenv" ".gitignore" "Public/" ".bash_sessions/" ".emacs.d" "Library/" "Desktop/" "Pictures/" "projects/" "mack/" "org/" ".zshrc" ".bashrc" ".CFUserTextEncoding" ".docker" "Music/" "../" "./")
+
+ ("/host_root/Users/jessemiller/projects/emacs/" (23185 62249 0 0) ".git/" "emacs.d/" ".gitignore" "Dockerfile" "LICENSE" "../" "./")
+
+ ("/host_root/Users/jessemiller/projects/emacs/emacs.d/" (23185 61913 0 0) "backups/" "elpa/" "init.el" "auto-save-list/" "init.el~" "ido.last" "../" "./")
+
+ ("/host_root/Users/jessemiller/mack/commands/" (23185 61667 0 0) "xcode-select.sh" "git.sh" "iterm.sh" "brew.sh" "chrome.sh" "make.sh" "just.sh" "emacs.sh" "gpg.sh" "command_not_found_handler.sh" "keybase.sh" "../" "./")
+
+ ("/host_root/Users/jessemiller/org/" (23185 58663 0 0) "notes.org" "../" "./")
+
+ ("/bin/" (23125 6623 0 0) "kill" "echo" "su" "date" "fdflush" "link" "conspy" "pidof" "ln" "rev" "more" "sed" "ed" "busybox" "gzip" "mkdir" "nice" "getopt" "dnsdomainname" "linux64" "ls" "watch" "setserial" "rmdir" "cp" "ps" "dmesg" "login" "setpriv" "uname" "chmod" "true" "mktemp" "usleep" "df" "ipcalc" "makemime" "tar" "printenv" "./" "mv" "cat" "ash" "chown" "iostat" "../" "umount" "chgrp" "false" "kbd_mode" "fsync" "mknod" "sleep" "hostname" "lzop" "mpstat" "linux32" "mountpoint" "reformime" "ionice" "stat" "pipe_progress" "zcat" "netstat" "stty" "mount" "fatattr" "sync" "touch" "dumpkmap" "gunzip" "base64" "pwd" "sh" "ping6" "grep" "run-parts" "egrep" "dd" "fgrep" "ping" "rm" "bbconfig")
+
+ ("/host_root/Users/jessemiller/projects/" (23185 60436 0 0) "writing/" "com/" "emacs/" "../" "./")
+
+ ("/host_root/Users/jessemiller/mack/dotfiles/.emacs.d/" (23185 51729 0 0) "backups/" "elpa/" "bookmarks" "init.el" "auto-save-list/" "var/" "places" "smex-items" "ido.last" "../" "./")
+
+ ("/root/" (23185 51689 64477 103000) ".wget-hsts" ".gnupg/" ".lein/" ".emacs.d/" "org/" ".tcshrc" ".bash_profile" "original-ks.cfg" "anaconda-post.log" "./" "../" ".bash_logout" ".bashrc" "anaconda-ks.cfg" ".cshrc")
+
+ ("/root/org/" (23185 51689 64477 103000) "./" "../" "notes.org")
+
  ("/tmp/hsperfdata_root/" (23178 56568 0 0) "435" "./" "../")
 
- ("/host_root/Users/jessemiller/mack/dotfiles/.emacs.d/" (23185 49049 0 0) "backups/" "elpa/" "init.el" "auto-save-list/" "var/" "places" "smex-items" "ido.last" "../" "./")
-
  ("/root/.emacs.d/" (23185 46584 0 0) "backups/" "elpa/" "init.el" "auto-save-list/" "places" "smex-items" "ido.last" "../" "./")
-
- ("/root/" (23178 56754 0 0) ".wget-hsts" ".gnupg/" ".lein/" ".emacs.d/" ".tcshrc" ".bash_profile" "original-ks.cfg" "anaconda-post.log" "./" "../" ".bash_logout" ".bashrc" "anaconda-ks.cfg" ".cshrc")
 
  ("/host_root/" (23182 19032 240000 107000) "run/" "port/" "opt/" "private/" "Volumes/" "Users/" "var/" "usr/" "tmp/" "sys/" "start-docker.sh" "sendtohost" "sbin/" "proc/" "libau.so.2.9" "libau.so.2" "libau.so" "lib/" "etc/" "dev/" "bin/" "../" "./")
 
  ("/host_root/Users/" (23179 12083 0 0) "Guest/" "jessemiller/" "Shared/" ".localized" "../" "./")
 
- ("/host_root/Users/jessemiller/" (23185 46573 0 0) ".viminfo" ".bash_history" ".gitconfig" "Downloads/" ".functions" "Documents/" ".Trash/" "Applications/" "Movies/" ".ssh/" ".zsh_prompt" ".zshenv" ".gitignore" "Public/" ".bash_sessions/" ".emacs.d" "Library/" "Desktop/" "Pictures/" "projects/" "mack/" ".zshrc" ".bashrc" ".CFUserTextEncoding" ".docker" "Music/" "../" "./")
-
  ("/host_root/Users/jessemiller/mack/" (23182 19160 0 0) ".git/" "commands/" "README.md" "provisioning/" "config/" "dotfiles/" "../" "./")
-
- ("/host_root/Users/jessemiller/mack/dotfiles/" (23185 45540 0 0) ".gitconfig" ".functions" ".zsh_prompt" ".zshenv" ".gitignore" ".emacs.d/" "install.sh" ".zshrc" ".docker/" "../" "./")
 
  ("/tmp/" (22956 22929 0 0) "hsperfdata_root/" ".Test-unix/" ".ICE-unix/" "ks-script-eup7u7fn" "../" "./" ".X11-unix/" ".XIM-unix/" ".font-unix/")
 

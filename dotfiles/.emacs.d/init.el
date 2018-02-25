@@ -17,6 +17,7 @@
 ;; in org-mode and magit
 (setq org-completion-use-ido t)
 (setq magit-completing-read-function 'magit-ido-completing-read)
+(setq magit-last-seen-setup-instructions "1.4.0")
 ;; in M-x
 (global-set-key (kbd "M-x") 'smex)
 (global-set-key (kbd "M-X") 'smex-major-mode-commands)
@@ -53,4 +54,13 @@
  )
 
 ;; org mode stuff
+(require 'org)
 (global-set-key "\C-ca" 'org-agenda)
+(setq org-default-notes-file (concat org-directory "/notes.org"))
+(define-key global-map "\C-cc" 'org-capture)
+
+;; Keep auto-backups and auto-saves out of the way
+(setq backup-directory-alist
+      `((".*" . ,temporary-file-directory)))
+(setq auto-save-file-name-transforms
+      `((".*" ,temporary-file-directory t)))
