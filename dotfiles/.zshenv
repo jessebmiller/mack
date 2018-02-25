@@ -1,12 +1,20 @@
+help() {
+    # Display helpful functions
+    echo "dotfiles: reinstall dotfiles"
+    echo "clone: clone stuff from your repo"
+}
+
 dotfiles() {
     # Reinstall dotfiles
     $(which zsh) $MACKPATH/dotfiles/install.sh
     $(which zsh)
 }
 
-help() {
-    # Display helpful functions
-    echo "dotfiles: reinstall dotfiles"
+clone() {
+    # Clone a repo from your github
+    # This really is only ever a dependancy for working with a repo locally
+    # can this be abstracted furthur?
+    git clone git@github.com:jessebmiller/$1.git
 }
 
 # use double quotes so the shell commands in the emacs command will execute
