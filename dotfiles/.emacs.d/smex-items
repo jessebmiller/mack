@@ -1,13 +1,13 @@
 
 ;; ----- smex-history -----
 (
+ whitespace-cleanup
+ recover-file
  magit-status
  deft
  package-list-packages
  package-refresh-contents
  package-autoremove
- eval-buffer
- paredit-mode
 )
 
 ;; ----- smex-data -----
@@ -23,7 +23,7 @@
  (column-number-mode . 2)
  (column-marker-1 . 1)
  (column-marker-3 . 1)
- (whitespace-cleanup . 1)
+ (whitespace-cleanup . 3)
  (clojure-mode . 1)
  (paredit-mode . 1)
  (package-autoremove . 1)
@@ -31,4 +31,5 @@
  (deft . 1)
  (deft-setup . 1)
  (magit-status . 13)
+ (recover-file . 1)
 )
