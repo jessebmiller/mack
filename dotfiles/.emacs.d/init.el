@@ -45,13 +45,15 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (deft toml-mode haskell-mode yaml-mode ssh-file-modes smex paredit markdown-mode magit ido-ubiquitous go-mode better-defaults))))
+    (js2-mode solidity-mode deft toml-mode haskell-mode yaml-mode ssh-file-modes smex paredit markdown-mode magit ido-ubiquitous go-mode better-defaults))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
+(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
 
 ;; org mode stuff
 (require 'org)
