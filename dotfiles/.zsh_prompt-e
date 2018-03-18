@@ -8,8 +8,15 @@ function git_ref() {
     ref=$(command git symbolic-ref --short HEAD 2> /dev/null) || \
         ref=$(command git rev-parse --short HEAD 2> /dev/null) || \
         return 0
-    echo "$ref"
+    echo "$(git_prompt_color)$ref%{$reset_color%}"
     return 0
+}
+
+function git_prompt_color() {
+    local dirty=$(git status --porcelain 2> /dev/null | tail -n1)
+    if [[ -n $dirty ]]; then
+        echo "%{$fg[red]%}"
+    fi
 }
 
 GIT_PROMPT_PREFIX="on "
@@ -20,7 +27,8 @@ function git_prompt() {
     if [[ -z $GIT_REF ]]; then
         return 0
     fi
-    echo "$GIT_PROMPT_PREFIX$GIT_REF$GIT_PROMPT_POSTFIX"
+    GIT_PROMPT="$GIT_PROMPT_PREFIX$GIT_REF$GIT_PROMPT_POSTFIX"
+    echo "$GIT_PROMPT"
     return 0
 }
 
