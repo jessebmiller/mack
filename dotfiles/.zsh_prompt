@@ -1,3 +1,16 @@
+setopt prompt_subst
+autoload -U colors
+colors
+
+function git_prompt() {
+    local ref
+    ref=$(command git symbolic-ref --short HEAD 2> /dev/null) || \
+        ref=$(command git rev-parse --short HEAD 2> /dev/null) || \
+        return 0
+    echo "on $ref"
+    return 0
+}
+
 PROMPT='
-%n at %m in %d
-$ '
+%n at %m in %~ $(git_prompt)
+%(?..%{$fg[red]%})❯%{$reset_color%} '
