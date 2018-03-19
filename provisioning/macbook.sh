@@ -2,6 +2,9 @@
 
 set +e
 
+# Set Hostname
+sudo scutil --set HostName dyson-alpha
+
 # Dock
 echo "fixing the Dock"
 defaults write com.apple.dock tilesize -int 1
