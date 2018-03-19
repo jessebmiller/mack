@@ -43,5 +43,5 @@ function user_prompt() {
 }
 
 PROMPT='
-$(user_prompt) at %m in %{$fg[wite]%}%~%{$reset_color%} $(git_prompt)
+$(user_prompt) at %m in %{$fg[white]%}%~%{$reset_color%} $(git_prompt)
 %(?..%{$fg[red]%})❯%{$reset_color%} '
