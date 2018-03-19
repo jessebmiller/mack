@@ -5,6 +5,10 @@ set +e
 # Set Hostname
 sudo scutil --set HostName dyson-alpha
 
+# Git global config
+git config --global set user.name "Jesse B. Miller"
+git config --global set user.email "jesse@jessebmiller.com"
+
 # Dock
 echo "fixing the Dock"
 defaults write com.apple.dock tilesize -int 1
