@@ -32,6 +32,16 @@ function git_prompt() {
     return 0
 }
 
+function user_prompt() {
+    local username
+    if [[ $(print -P "%#") == '#' ]]; then
+        username="%{$fg[red]%}Privileged%{$reset_color%}"
+    else
+        username="$(git config --global user.name)"
+    fi
+    echo $username
+}
+
 PROMPT='
-%n at %m in %~ $(git_prompt)
+$(user_prompt) at %m in %~ $(git_prompt)
 %(?..%{$fg[red]%})❯%{$reset_color%} '
