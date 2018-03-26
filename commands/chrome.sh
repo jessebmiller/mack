@@ -1,5 +1,5 @@
 #! /bin/zsh
-echo "$@"
+
 # Try it
 open -a "Google Chrome" "$@"
 
