@@ -1,1 +1,1 @@
-brew install iterm
+brew cask install iterm2
