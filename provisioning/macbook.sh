@@ -19,6 +19,10 @@ killall Dock
 # homebrew
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
+# ZSH
+brew install zsh
+sudo dscl . -create /Users/$USER UserShell /usr/local/bin/zsh
+
 # Fonts
 echo "Installing fonts"
 brew cask install \
