@@ -16,10 +16,12 @@ defaults write com.apple.dock autohide-time-modifier -float 20000000000
 defaults write com.apple.Dock autohide -bool TRUE
 killall Dock
 
+# homebrew
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
 # Fonts
 echo "Installing fonts"
 brew cask install \
-  font-anonymous-pro \
   font-dejavu-sans-mono-for-powerline \
   font-droid-sans \
   font-droid-sans-mono font-droid-sans-mono-for-powerline \
