@@ -1,1 +1,2 @@
 brew install just
+just "$@"
