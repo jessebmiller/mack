@@ -29,6 +29,7 @@ brew cask install \
   font-dejavu-sans-mono-for-powerline \
   font-droid-sans \
   font-droid-sans-mono font-droid-sans-mono-for-powerline \
+  font-fira-code \
   font-meslo-lg font-input \
   font-inconsolata font-inconsolata-for-powerline \
   font-liberation-mono font-liberation-mono-for-powerline \
