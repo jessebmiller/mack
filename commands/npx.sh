@@ -3,4 +3,4 @@ docker run \
        --rm \
        -v $(pwd):$(pwd) \
        --workdir $(pwd) \
-       node npm "$@"
+       node npx "$@"
