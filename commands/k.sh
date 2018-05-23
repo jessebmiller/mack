@@ -1,0 +1,1 @@
+/Users/jesse/mack/commands/kubectl.sh
