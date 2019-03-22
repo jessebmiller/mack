@@ -60,7 +60,7 @@
 ;; org mode stuff
 (require 'org)
 (global-set-key "\C-ca" 'org-agenda)
-(setq org-default-notes-file (concat org-directory "/notes.org"))
+(setq org-default-notes-file (concat org-directory "/inbox.org"))
 (define-key global-map "\C-cc" 'org-capture)
 
 ;; Keep auto-backups and auto-saves out of the way
