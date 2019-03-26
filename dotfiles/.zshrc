@@ -8,3 +8,4 @@ if [ -f '/usr/local/bin/google-cloud-sdk/google-cloud-sdk/path.zsh.inc' ]; then 
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/usr/local/bin/google-cloud-sdk/google-cloud-sdk/completion.zsh.inc' ]; then source '/usr/local/bin/google-cloud-sdk/google-cloud-sdk/completion.zsh.inc'; fi
+export GARDEN_API_KEY=[redacted]

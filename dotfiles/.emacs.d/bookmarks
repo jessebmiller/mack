@@ -2,9 +2,19 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("org-capture-last-stored"
- (filename . "~/org/notes.org")
- (front-context-string . "** TODO C-p emac")
+(("org-capture-last-stored-marker"
+ (filename . "/host_root/Users/jmille47/org/notes.org")
+ (front-context-string . "** TODO \n   [201")
+ (rear-context-string . "rg/notes.org]]\n\n")
+ (position . 94))
+("org-refile-last-stored"
+ (filename . "/host_root/Users/jmille47/org/notes.org")
+ (front-context-string . "** TODO \n   [201")
+ (rear-context-string . "rg/notes.org]]\n\n")
+ (position . 94))
+("org-capture-last-stored"
+ (filename . "/host_root/Users/jmille47/org/notes.org")
+ (front-context-string . "** TODO \n   [201")
  (rear-context-string)
- (position . 9))
+ (position . 12))
 )
