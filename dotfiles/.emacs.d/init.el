@@ -42,6 +42,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(org-agenda-files (quote ("/host_root/Users/jmille47/org/projects.org")))
  '(package-selected-packages
    (quote
     (rjsx-mode js2-mode solidity-mode deft toml-mode haskell-mode yaml-mode ssh-file-modes smex paredit markdown-mode magit ido-ubiquitous go-mode better-defaults))))
@@ -62,6 +63,10 @@
 (global-set-key "\C-ca" 'org-agenda)
 (setq org-default-notes-file (concat org-directory "/inbox.org"))
 (define-key global-map "\C-cc" 'org-capture)
+
+(setq org-refile-targets '(("~/org/projects.org" :maxlevel . 3)
+                           ("~/org/someday.org" :level . 1)
+                           ("~/org/scheduled.org" :maxlevel . 2)))
 
 ;; Keep auto-backups and auto-saves out of the way
 (setq backup-directory-alist
