@@ -8,10 +8,10 @@
  (rear-context-string . "rg/notes.org]]\n\n")
  (position . 94))
 ("org-refile-last-stored"
- (filename . "/host_root/Users/jmille47/org/notes.org")
- (front-context-string . "** TODO \n   [201")
- (rear-context-string . "rg/notes.org]]\n\n")
- (position . 94))
+ (filename . "~/org/projects.org")
+ (front-context-string . "*** refile this ")
+ (rear-context-string . "st sent slack)\n\n")
+ (position . 4213))
 ("org-capture-last-stored"
  (filename . "/host_root/Users/jmille47/org/notes.org")
  (front-context-string . "** TODO \n   [201")
