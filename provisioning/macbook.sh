@@ -11,6 +11,7 @@ git config --global set user.email "jesse@jessebmiller.com"
 
 # Dock
 echo "fixing the Dock"
+defaults write com.apple.dock orientation -string right
 defaults write com.apple.dock tilesize -int 1
 defaults write com.apple.dock autohide-time-modifier -float 20000000000
 defaults write com.apple.Dock autohide -bool TRUE
@@ -22,6 +23,9 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 # ZSH
 brew install zsh
 sudo dscl . -create /Users/$USER UserShell /usr/local/bin/zsh
+
+# Amethyst
+brew cask install amethyst
 
 # Fonts
 echo "Installing fonts"
