@@ -64,9 +64,11 @@
 (setq org-default-notes-file (concat org-directory "/inbox.org"))
 (define-key global-map "\C-cc" 'org-capture)
 
-(setq org-refile-targets '(("~/org/projects.org" :maxlevel . 2)
+(setq org-refile-targets '(("~/org/projects.org" :maxlevel . 3)
                            ("~/org/someday.org" :level . 1)
-                           ("~/org/scheduled.org" :maxlevel . 1)))
+                           ("~/org/scheduled.org" :maxlevel . 1)
+                           ("~/org/inactive_projects.org" :maxlevel . 1)
+                           ("~/org/reference.org" :maxlevel . 1)))
 
 (setq org-todo-keywords
       '((sequence "TODO(t)" "WAITING(w)" "|" "DONE(d)" "CANCELLED(c)")))
