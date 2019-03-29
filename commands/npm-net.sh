@@ -1,7 +1,9 @@
+port=$1
+shift
 docker run \
        -it \
        --rm \
        -v $(pwd):$(pwd) \
        --workdir $(pwd) \
-       -p 8080:8080 \
+       -p $port:$port \
        node npm "$@"
