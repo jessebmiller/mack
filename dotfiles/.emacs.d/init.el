@@ -45,7 +45,7 @@
  '(org-agenda-files (quote ("/host_root/Users/jmille47/org/projects.org")))
  '(package-selected-packages
    (quote
-    (rjsx-mode js2-mode solidity-mode deft toml-mode haskell-mode yaml-mode ssh-file-modes smex paredit markdown-mode magit ido-ubiquitous go-mode better-defaults))))
+    (flycheck rust-mode rust-auto-use rjsx-mode js2-mode solidity-mode deft toml-mode haskell-mode yaml-mode ssh-file-modes smex paredit markdown-mode magit ido-ubiquitous go-mode better-defaults))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -73,6 +73,8 @@
 (setq org-todo-keywords
       '((sequence "TODO(t)" "WAITING(w)" "|" "DONE(d)" "CANCELLED(c)")))
 
+;; turn on flycheck everywhere
+(add-hook 'after-init-hook #'global-flycheck-mode)
 
 ;; Keep auto-backups and auto-saves out of the way
 (setq backup-directory-alist
