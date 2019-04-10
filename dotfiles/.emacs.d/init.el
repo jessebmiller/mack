@@ -71,8 +71,14 @@
                            ("~/org/reference.org" :maxlevel . 1)))
 
 (setq org-todo-keywords
-      '((sequence "TODO(t)" "WAITING(w)" "|" "DONE(d)" "CANCELLED(c)")))
+      '((sequence "[ ](t)" "[?](w)" "|" "[X](d)" "CANCELLED(c)")))
 
+(setq org-capture-templates
+      '(("t" "Todo" entry (file+headline "~/org/inbox.org" "Tasks")
+         "* [ ] %?\n %i")))
+
+(define-key global-map "\C-ct"
+  (lambda () (interactive) (org-capture nil "t")))
 
 ;; Keep auto-backups and auto-saves out of the way
 (setq backup-directory-alist
@@ -80,3 +86,5 @@
 (setq auto-save-file-name-transforms
       `((".*" ,temporary-file-directory t)))
 
+;; set the magit key binding
+(define-key global-map "\C-xg" 'magit-status)
