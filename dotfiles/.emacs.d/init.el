@@ -42,7 +42,8 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(org-agenda-files (quote ("/host_root/Users/jmille47/org/projects.org")))
+ '(org-agenda-files (quote ("/host_root/Users/jmille47/org/projects.org"
+                            "/host_root/Users/jmille47/org/scheduled.org")))
  '(package-selected-packages
    (quote
     (rjsx-mode js2-mode solidity-mode deft toml-mode haskell-mode yaml-mode ssh-file-modes smex paredit markdown-mode magit ido-ubiquitous go-mode better-defaults))))
@@ -71,7 +72,7 @@
                            ("~/org/reference.org" :maxlevel . 1)))
 
 (setq org-todo-keywords
-      '((sequence "[ ](t)" "[?](w)" "|" "[X](d)" "CANCELLED(c)")))
+      '((sequence "[ ](t)" "[?](w)" "|" "[X](d)" "[-](c)")))
 
 (setq org-capture-templates
       '(("t" "Todo" entry (file+headline "~/org/inbox.org" "Tasks")
