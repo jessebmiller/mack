@@ -103,4 +103,4 @@
 (put 'downcase-region 'disabled nil)
 
 ;; orgmode multiline bold
-(setcar (nthcdr 2 org-emphasis-regexp-components) " \t\r\n,\"")
+cd (setcar (nthcdr 2 org-emphasis-regexp-components) " \t\r\n,\"")
