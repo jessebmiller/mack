@@ -10,6 +10,9 @@
        (url (concat (if no-ssl "http" "https") "://melpa.org/packages/")))
     (add-to-list 'package-archives (cons "melpa" url) t))
 
+;; wrangle those save files
+(setq backup-directory-alist `(("." . "~/.emacs-saves")))
+
 ;; get some ido goodness
 (ido-mode 1)
 (ido-everywhere 1)
