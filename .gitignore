@@ -2,3 +2,4 @@ dotfiles/.docker/.buildNodeID
 dotfiles/.emacs.d/elpa/archives/*
 dotfiles/.emacs.d/ido.last
 dotfiles/.emacs.d/smex-items
+dotfiles/.emacs.d/session*
