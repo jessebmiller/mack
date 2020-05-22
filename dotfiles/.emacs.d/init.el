@@ -28,6 +28,10 @@
 ;; disable auto-save
 (setq auto-save-default nil)
 
+;; move the backups directory
+(setq backup-directory-alist
+      `(("." . ,(concat user-emacs-directory "backups"))))
+
 ;; whitespace and long line highlighting
 (require 'whitespace)
 (setq whitespace-style '(face trailing lines-tail))
@@ -103,4 +107,4 @@
 (put 'downcase-region 'disabled nil)
 
 ;; orgmode multiline bold
-cd (setcar (nthcdr 2 org-emphasis-regexp-components) " \t\r\n,\"")
+(setcar (nthcdr 2 org-emphasis-regexp-components) " \t\r\n,\"")
