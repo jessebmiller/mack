@@ -60,7 +60,7 @@
  '(org-agenda-files
    '("~/org/ideas.org" "~/org/reference.org" "~/org/inbox.org"))
  '(package-selected-packages
-   '(gdscript-mode solidity-mode tide typescript-mode rust-mode solarized-theme color-theme-sanityinc-solarized rjsx-mode js2-mode deft toml-mode haskell-mode yaml-mode ssh-file-modes smex paredit markdown-mode magit ido-ubiquitous go-mode better-defaults)))
+   '(graphql-mode gdscript-mode solidity-mode tide typescript-mode rust-mode solarized-theme color-theme-sanityinc-solarized rjsx-mode js2-mode deft toml-mode haskell-mode yaml-mode ssh-file-modes smex paredit markdown-mode magit ido-ubiquitous go-mode better-defaults)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -72,6 +72,7 @@
 (setq js-indent-level 2)
 (setq js2-strict-missing-semi-warning nil)
 (setq js2-missing-semi-one-line-override t)
+(setq-default typescript-indent-level 2)
 
 ;; org mode stuff
 (require 'org)
