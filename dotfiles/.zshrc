@@ -14,6 +14,7 @@ if [ -f '/usr/local/bin/google-cloud-sdk/google-cloud-sdk/completion.zsh.inc' ];
 
 export PATH=$PATH:/home/jesse/bin
 export PATH=$PATH:"$HOME/.radicle/bin:$PATH"
+export PATH=$PATH:"$HOME/.yarn/bin:$PATH"
 
 source '/home/jesse/lib/azure-cli/az.completion'
 
