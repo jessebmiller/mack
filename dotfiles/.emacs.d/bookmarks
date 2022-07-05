@@ -1,4 +1,4 @@
-;;;; Emacs Bookmark Format Version 1 ;;;; -*- coding: utf-8-emacs -*- 
+;;;; Emacs Bookmark Format Version 1 ;;;; -*- coding: utf-8-emacs -*-
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
@@ -13,8 +13,8 @@
  (rear-context-string . " them together.\n")
  (position . 360))
 ("org-capture-last-stored"
- (filename . "~/org/inbox.org")
- (front-context-string . "** What is the c")
- (rear-context-string . "* Tasks\n* Ideas\n")
- (position . 17))
+ (filename . "~/org-roam/20220704144419-.org")
+ (front-context-string . "My Daily Routine")
+ (rear-context-string . "\n:END:\n#+title: ")
+ (position . 77))
 )

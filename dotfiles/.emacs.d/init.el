@@ -8,7 +8,14 @@
 (let* ((no-ssl (and (memq system-type '(windows-nt ms-dos))
                     (not (gnutls-available-p))))
        (url (concat (if no-ssl "http" "https") "://melpa.org/packages/")))
-    (add-to-list 'package-archives (cons "melpa" url) t))
+  (add-to-list 'package-archives (cons "melpa" url) t))
+
+;; use-package to simplify the config file
+(unless (package-installed-p 'use-package)
+  (package-refresh-contents)
+  (package-install 'use-package))
+(require 'use-package)
+(setq use-package-always-ensure 't)
 
 ;; get some ido goodness
 (ido-mode 1)
@@ -57,10 +64,11 @@
    '("4cf3221feff536e2b3385209e9b9dc4c2e0818a69a1cdb4b522756bcdf4e00a4" "c433c87bd4b64b8ba9890e8ed64597ea0f8eb0396f4c9a9e01bd20a04d15d358" "00445e6f15d31e9afaa23ed0d765850e9cd5e929be5e8e63b114a3346236c44c" "285d1bf306091644fb49993341e0ad8bafe57130d9981b680c1dbd974475c5c7" "7f1d414afda803f3244c6fb4c2c64bea44dac040ed3731ec9d75275b9e831fe5" "4aee8551b53a43a883cb0b7f3255d6859d766b6c5e14bcb01bed572fcbef4328" "0fffa9669425ff140ff2ae8568c7719705ef33b7a927a0ba7c5e2ffcfac09b75" "51ec7bfa54adf5fff5d466248ea6431097f5a18224788d0bd7eb1257a4f7b773" "13a8eaddb003fd0d561096e11e1a91b029d3c9d64554f8e897b2513dbf14b277" "830877f4aab227556548dc0a28bf395d0abe0e3a0ab95455731c9ea5ab5fe4e1" "2809bcb77ad21312897b541134981282dc455ccd7c14d74cc333b6e549b824f3" default))
  '(flycheck-color-mode-line-face-to-color 'mode-line-buffer-id)
  '(frame-background-mode 'light)
+ '(ispell-dictionary nil)
  '(org-agenda-files
    '("~/org/ideas.org" "~/org/reference.org" "~/org/inbox.org"))
  '(package-selected-packages
-   '(graphql-mode gdscript-mode solidity-mode tide typescript-mode rust-mode solarized-theme color-theme-sanityinc-solarized rjsx-mode js2-mode deft toml-mode haskell-mode yaml-mode ssh-file-modes smex paredit markdown-mode magit ido-ubiquitous go-mode better-defaults)))
+   '(use-package f org-roam terraform-mode graphql-mode gdscript-mode solidity-mode tide typescript-mode rust-mode solarized-theme color-theme-sanityinc-solarized rjsx-mode js2-mode deft toml-mode haskell-mode yaml-mode ssh-file-modes smex paredit markdown-mode magit ido-ubiquitous go-mode better-defaults)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -78,7 +86,7 @@
 (require 'org)
 (global-set-key "\C-ca" 'org-agenda)
 (setq org-default-notes-file (concat org-directory "/inbox.org"))
-(define-key global-map "\C-cc" 'org-capture)
+(define-key global-map "\C-co" 'org-capture)
 
 (setq org-refile-targets '(("~/org/reference.org" :maxlevel . 1)
                            ("~/org/ideas.org" :maxlevel . 1)))
@@ -97,12 +105,33 @@
         ("i" "Idea" entry (file+headline "~/org/inbox.org" "Ideas")
          "* %? %^G\n %i")))
 
-(define-key global-map "\C-cr"
-  (lambda () (interactive) (org-capture nil "r")))
-(define-key global-map "\C-ci"
-  (lambda () (interactive) (org-capture nil "i")))
-(define-key global-map "\C-ct"
-  (lambda () (interactive) (org-capture nil "t")))
+
+(use-package deft
+  :after org
+  :bind
+  ("C-c n d" . deft)
+  :custom
+  (deft-recursive t)
+  (deft-use-filter-string-for-filename t)
+  (deft-default-extension "org")
+  (deft-directory "~/org-roam"))
+
+(use-package org-roam
+             :after org
+             :init (setq org-roam-v2-ack t) ;; Acknowledge V2 upgrade
+             :custom
+             (org-roam-directory (file-truename "~/org-roam"))
+             :config
+             (org-roam-setup)
+             :bind (("C-c n f" . org-roam-node-find)
+                    ("C-c n r" . org-roam-node-random)
+                    ("C-c n c" . org-roam-capture)
+                    (:map org-mode-map
+                          (("C-c n i" . org-roam-node-insert)
+                           ("C-c n o" . org-id-get-create)
+                           ("C-c n t" . org-roam-tag-add)
+                           ("C-c n a" . org-roam-alias-add)
+                           ("C-c n l" . org-roam-buffer-toggle)))))
 
 ;; Keep auto-backups and auto-saves out of the way
 (setq backup-directory-alist
@@ -117,3 +146,11 @@
 
 ;; orgmode multiline bold
 (setcar (nthcdr 2 org-emphasis-regexp-components) " \t\r\n,\"")
+
+;; org-roam
+;; https://www.orgroam.com/manual.html#Installation
+
+(unless (file-exists-p "~/org-roam") (make-directory "~/org-roam"))
+(setq org-roam-directory (file-truename "~/org-roam"))
+(setq find-file-visit-truename t)
+(org-roam-db-autosync-mode)
