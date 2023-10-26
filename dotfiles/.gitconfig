@@ -4,3 +4,5 @@
 	email = jesse@jessebmiller.com
 [core]
 	excludesfile = ~/.user_gitignore
+[init]
+	defaultBranch = main

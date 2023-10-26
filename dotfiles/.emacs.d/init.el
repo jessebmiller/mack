@@ -2,6 +2,33 @@
 ;; installed packages.  Don't delete this line.  If you don't want it,
 ;; just comment it out by adding a semicolon to the start of the line.
 ;; You may delete these explanatory comments.
+
+(defvar bootstrap-version)
+(let ((bootstrap-file
+       (expand-file-name "straight/repos/straight.el/bootstrap.el" user-emacs-directory))
+      (bootstrap-version 6))
+  (unless (file-exists-p bootstrap-file)
+    (with-current-buffer
+        (url-retrieve-synchronously
+         "https://raw.githubusercontent.com/radian-software/straight.el/develop/install.el"
+         'silent 'inhibit-cookies)
+      (goto-char (point-max))
+      (eval-print-last-sexp)))
+  (load bootstrap-file nil 'nomessage))
+
+(use-package copilot
+  :straight (:host github :repo "zerolfx/copilot.el" :files ("dist" "*.el"))
+  :ensure t)
+
+(add-hook 'prog-mode-hook 'copilot-mode)
+
+(with-eval-after-load 'company
+  ;; disable inline previews
+  (delq 'company-preview-if-just-one-frontend company-frontends))
+
+(define-key copilot-completion-map (kbd "<tab>") 'copilot-accept-completion)
+(define-key copilot-completion-map (kbd "TAB") 'copilot-accept-completion)
+
 (package-initialize)
 
 (require 'package)
@@ -16,6 +43,8 @@
   (package-install 'use-package))
 (require 'use-package)
 (setq use-package-always-ensure 't)
+
+(add-hook 'rust-mode-hook 'lsp-deferred)
 
 ;; get some ido goodness
 (ido-mode 1)
@@ -42,15 +71,18 @@
 ;; no lock files jesus fucking christ
 (setq create-lockfiles nil)
 
+
+
 ;; whitespace and long line highlighting
 (require 'whitespace)
-(setq whitespace-style '(face trailing lines-tail))
+(setq whitespace-style '(face trailing))
 (set-face-attribute 'whitespace-trailing nil
                     :background "#585858")
 (set-face-attribute 'whitespace-line nil
                     :background "#585858"
                     :foreground "#808080")
 (global-whitespace-mode 1)
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -140,7 +172,7 @@
       `((".*" ,temporary-file-directory t)))
 
 ;; set the magit key binding
-(define-key global-map "\C-xg" 'magit-status)
+(global-set-key (kbd "C-x g") 'magit-status)
 (put 'upcase-region 'disabled nil)
 (put 'downcase-region 'disabled nil)
 
