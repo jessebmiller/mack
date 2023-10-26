@@ -13,8 +13,8 @@
  (rear-context-string . " them together.\n")
  (position . 360))
 ("org-capture-last-stored"
- (filename . "~/org-roam/20220813134140-the_pool_fortune_mechanic.org")
- (front-context-string . "#+filetags: :gam")
- (rear-context-string . "ortune Mechanic\n")
- (position . 103))
+ (filename . "~/org-roam/20220704144419-.org")
+ (front-context-string . "My Daily Routine")
+ (rear-context-string . "\n:END:\n#+title: ")
+ (position . 77))
 )
